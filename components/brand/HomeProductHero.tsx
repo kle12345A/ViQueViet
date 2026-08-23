@@ -11,6 +11,16 @@ const highlights = [
 export function HomeProductHero() {
   return (
     <section className="home-product-hero">
+      <Image
+        className="home-product-background"
+        src="/images/brand/home-countryside-bg.webp"
+        alt=""
+        fill
+        priority
+        fetchPriority="high"
+        quality={70}
+        sizes="100vw"
+      />
       <div className="container home-product-hero-grid">
         <div className="home-product-copy">
           <p className="home-product-eyebrow">Vị Quê Việt</p>
@@ -24,7 +34,7 @@ export function HomeProductHero() {
         <div className="home-product-visual">
           <figure className="home-product-main-image"><Image src="/images/home/home-food-main.webp" alt="Mẹt món Việt gồm giò chả, xúc xích, món chiên, rau thơm và nước chấm" fill priority sizes="(max-width: 820px) 100vw, 58vw" /></figure>
           <figure className="home-product-secondary-image"><Image src="/images/home/home-food-secondary.webp" alt="Giò chả thái lát bày trên mẹt tre cùng rau thơm và nước chấm" fill sizes="(max-width: 620px) 54vw, 24vw" /></figure>
-          <div className="home-product-seal" aria-label="Vị Quê Việt - Đậm vị quê nhà"><strong>VQ</strong><span>Đậm vị quê nhà</span></div>
+          <div className="home-product-seal" role="img" aria-label="Logo Vị Quê Việt"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="76px" /></div>
         </div>
       </div>
 

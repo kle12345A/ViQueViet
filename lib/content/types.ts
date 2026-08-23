@@ -28,6 +28,8 @@ export type Post = {
   publishedAt: string;
   author: string;
   status: string;
+  tags?: string[];
+  tip?: string;
   body: string;
 };
 

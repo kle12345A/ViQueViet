@@ -45,7 +45,7 @@ export function AboutLandingPage() {
             </div>
           </div>
 
-          <div className="about-collage" aria-label="Hình ảnh thực tế từ hoạt động sản xuất">
+          <div className="about-collage" role="group" aria-label="Hình ảnh thực tế từ hoạt động sản xuất">
             <span className="about-collage-paper" aria-hidden="true" />
             <figure className="about-collage-photo about-collage-main">
               <Image src="/images/about/about-production-team.webp" alt="Đội ngũ thao tác tại khu vực sản xuất" fill priority sizes="(max-width: 980px) 92vw, 48vw" />
@@ -54,7 +54,7 @@ export function AboutLandingPage() {
               <Image src="/images/about/about-finished-products.webp" alt="Các phần sản phẩm đã được chuẩn bị và đóng khay" fill sizes="(max-width: 980px) 58vw, 25vw" />
             </figure>
             <span className="about-paperclip" aria-hidden="true" />
-            <span className="about-seal" aria-hidden="true"><strong>VQ</strong><small>Đậm vị quê nhà</small></span>
+            <span className="about-seal" aria-hidden="true"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="94px" /></span>
           </div>
         </div>
       </section>
@@ -101,7 +101,6 @@ export function AboutLandingPage() {
           <header className="about-section-heading">
             <p className="about-eyebrow">Cách chúng tôi làm việc</p>
             <h2 id="about-approach-title">Một hành trình được sắp xếp theo từng bước</h2>
-            <p>Bố cục đơn giản để người xem hiểu nhanh cách một nhu cầu được trao đổi, thực hiện và hoàn thiện.</p>
           </header>
           <div className="about-approach-grid">
             {approach.map((item) => (

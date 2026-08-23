@@ -18,7 +18,7 @@ export function ProductCatalogue({ initialProducts, allProducts }: { initialProd
     <div>
       <div className="product-tools">
         <label className="search-box"><span className="sr-only">Tìm sản phẩm</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Tìm sản phẩm…" /></label>
-        <div className="filter-chips" aria-label="Lọc theo danh mục">
+        <div className="filter-chips" role="group" aria-label="Lọc theo danh mục">
           <button className={category === "all" ? "active" : ""} onClick={() => setCategory("all")} type="button">Tất cả</button>
           {categories.map(([value, label]) => <button className={category === value ? "active" : ""} key={value} onClick={() => setCategory(value)} type="button">{label}</button>)}
         </div>

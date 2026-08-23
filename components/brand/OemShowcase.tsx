@@ -23,7 +23,7 @@ export function OemShowcase() {
     <section className="section oem-showcase" id="oem-odm-home">
       <div className="container">
         <div className="oem-showcase-grid">
-          <div className="oem-collage" aria-label="Hình ảnh minh họa dịch vụ OEM/ODM">
+          <div className="oem-collage" role="group" aria-label="Hình ảnh minh họa dịch vụ OEM/ODM">
             <div className="oem-board">
               <div className="oem-collage-brand"><BrandMark linked={false} /></div>
               <svg className="oem-collage-branch" viewBox="0 0 270 110" aria-hidden="true">
@@ -36,7 +36,7 @@ export function OemShowcase() {
               <figure className="oem-collage-photo oem-collage-photo-left"><Image src="/images/factory/quality-control.webp" alt="" fill sizes="(max-width: 820px) 24vw, 12vw" /></figure>
               <figure className="oem-collage-photo oem-collage-photo-right"><Image src="/images/products/cha-com-tu-le/hero.webp" alt="" fill sizes="(max-width: 820px) 24vw, 12vw" /></figure>
               <p className="oem-collage-caption">Chất lượng từ tâm, hương vị từ quê hương</p>
-              <span className="oem-collage-seal" aria-hidden="true">VQ</span>
+              <span className="oem-collage-seal" aria-hidden="true"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="68px" /></span>
             </div>
           </div>
 

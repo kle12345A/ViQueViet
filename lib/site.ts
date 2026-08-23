@@ -1,5 +1,5 @@
-const contactPhone = process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "0888 72 75 75";
-const secondaryPhone = process.env.NEXT_PUBLIC_SECONDARY_PHONE ?? "0942 668 699";
+const contactPhone = process.env.NEXT_PUBLIC_CONTACT_PHONE ?? "0888.72.75.75";
+const secondaryPhone = process.env.NEXT_PUBLIC_SECONDARY_PHONE ?? "";
 const zaloUrl = process.env.NEXT_PUBLIC_ZALO_URL ?? "";
 
 export const siteConfig = {
@@ -10,11 +10,11 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   phone: contactPhone,
   secondaryPhone,
-  phoneHref: contactPhone ? `tel:${contactPhone.replace(/\s/g, "")}` : "/lien-he",
-  secondaryPhoneHref: secondaryPhone ? `tel:${secondaryPhone.replace(/\s/g, "")}` : "/lien-he",
+  phoneHref: contactPhone ? `tel:${contactPhone.replace(/[^\d+]/g, "")}` : "/lien-he",
+  secondaryPhoneHref: secondaryPhone ? `tel:${secondaryPhone.replace(/[^\d+]/g, "")}` : "/lien-he",
   zaloHref: zaloUrl || "/lien-he",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "lienhe@linhdangfoods.vn",
-  address: process.env.NEXT_PUBLIC_CONTACT_ADDRESS ?? "Lô C12-1/2, đường Quang Trung, P. Bồng Lai, TX. Quế Võ, Bắc Ninh",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "Viqueviet2026@gmail.com",
+  address: process.env.NEXT_PUBLIC_CONTACT_ADDRESS ?? "Tổ dân phố Vũ Dương 2, Phường Bồng Lai, tỉnh Bắc Ninh",
   publicWebsite: process.env.NEXT_PUBLIC_PUBLIC_WEBSITE ?? "https://linhdangfoods.vn",
   workingHours: process.env.NEXT_PUBLIC_WORKING_HOURS ?? "Thứ 2 – Thứ 7 · 08:00 – 17:30",
 };

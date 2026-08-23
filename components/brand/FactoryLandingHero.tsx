@@ -29,7 +29,7 @@ export function FactoryLandingHero() {
           </div>
         </div>
 
-        <div className="factory-safety-badge" aria-label="Sản xuất an toàn, đảm bảo chất lượng">
+        <div className="factory-safety-badge">
           <FactoryIcon kind="safe" />
           <span>Sản xuất an toàn</span>
           <strong>Đảm bảo chất lượng</strong>

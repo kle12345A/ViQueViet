@@ -26,7 +26,7 @@ export function Footer() {
         </div>
         <div>
           <h2>Liên hệ</h2>
-          <a href={siteConfig.phoneHref}>{siteConfig.phone}</a><a href={siteConfig.secondaryPhoneHref}>{siteConfig.secondaryPhone}</a><a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a><span>{siteConfig.address}</span>
+          <a href={siteConfig.phoneHref}>{siteConfig.phone}</a>{siteConfig.secondaryPhone ? <a href={siteConfig.secondaryPhoneHref}>{siteConfig.secondaryPhone}</a> : null}<a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a><span>{siteConfig.address}</span>
         </div>
       </div>
       <div className="container footer-bottom">

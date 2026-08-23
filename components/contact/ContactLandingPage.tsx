@@ -15,7 +15,7 @@ const heroFeatures: { icon: IconName; title: string; text: string }[] = [
 
 const contactItems: { icon: IconName; title: string; content: ReactNode }[] = [
   { icon: "pin", title: "Địa chỉ", content: siteConfig.address },
-  { icon: "phone", title: "Điện thoại", content: <><a href={siteConfig.phoneHref}>{siteConfig.phone}</a><a href={siteConfig.secondaryPhoneHref}>{siteConfig.secondaryPhone}</a></> },
+  { icon: "phone", title: "Điện thoại", content: <><a href={siteConfig.phoneHref}>{siteConfig.phone}</a>{siteConfig.secondaryPhone ? <a href={siteConfig.secondaryPhoneHref}>{siteConfig.secondaryPhone}</a> : null}</> },
   { icon: "mail", title: "Email", content: <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a> },
   { icon: "globe", title: "Website", content: <a href={siteConfig.publicWebsite} target="_blank" rel="noreferrer">www.linhdangfoods.vn</a> },
   { icon: "clock", title: "Thời gian làm việc", content: <>{siteConfig.workingHours}<br />Chủ nhật: Nghỉ</> },
@@ -45,7 +45,7 @@ export function ContactLandingPage() {
           </div>
           <div className="contact-hero-media">
             <Image className="contact-hero-image" src="/images/contact/contact-factory.webp" alt="Khu vực sản xuất thực tế của Vị Quê Việt" fill priority sizes="(max-width: 900px) 100vw, 52vw" />
-            <div className="contact-hero-badge" aria-label="Vị Quê Việt - Đậm vị quê nhà"><strong>VQ</strong><span>Vị Quê Việt</span><small>Đậm vị quê nhà</small></div>
+            <div className="contact-hero-badge" role="img" aria-label="Logo Vị Quê Việt"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="122px" /></div>
           </div>
         </div>
       </section>

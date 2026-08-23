@@ -44,7 +44,7 @@ export function BrandStoryShowcase() {
           </div>
         </div>
 
-        <div className="brand-story-collage" aria-label="Bữa cơm gia đình cùng các món Vị Quê Việt">
+        <div className="brand-story-collage" role="group" aria-label="Bữa cơm gia đình cùng các món Vị Quê Việt">
           <span className="brand-story-paper brand-story-paper-back" aria-hidden="true" />
           <span className="brand-story-paper brand-story-paper-middle" aria-hidden="true" />
           <figure className="brand-story-photo brand-story-photo-main">
@@ -57,7 +57,7 @@ export function BrandStoryShowcase() {
             <Image src="/images/brand/hero-products.webp" alt="Các món sản phẩm được bày trên bàn" fill sizes="(max-width: 980px) 36vw, 17vw" />
           </figure>
           <span className="brand-story-paperclip" aria-hidden="true" />
-          <span className="brand-story-seal" aria-hidden="true"><b>VQ</b><small>Đậm vị quê nhà</small></span>
+          <span className="brand-story-seal" aria-hidden="true"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="96px" /></span>
         </div>
       </div>
     </section>
