@@ -1,4 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vị Quê Việt
+
+Website marketing/catalogue static-first được xây dựng bằng Next.js App Router, TypeScript và Tailwind CSS.
+
+## Chạy dự án
+
+```bash
+npm install
+npm run dev
+```
+
+Kiểm tra trước khi triển khai:
+
+```bash
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+```
+
+## Nội dung và ảnh
+
+- Sản phẩm: `content/products/*.mdx`
+- Bài viết: `content/posts/*.mdx`
+- Inventory nguồn: `docs/assets-inventory.md`
+- Bản đồ nội dung: `docs/content-map.md`
+- Chạy lại migration ảnh (Windows): `npm run assets:migrate`
+
+Các file gốc trong thư mục MKT không bị chỉnh sửa. Hai sản phẩm chưa nhận diện được ảnh nguồn dùng placeholder ghi rõ trạng thái.
+
+## Cấu hình production
+
+Sao chép `.env.example` thành `.env.local` và xác nhận URL, email, địa chỉ. Chỉ bật HSTS sau khi domain production đã chạy HTTPS ổn định. CSP và các header bảo mật còn lại được cấu hình trong `next.config.ts`.
 
 ## Getting Started
 

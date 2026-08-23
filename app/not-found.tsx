@@ -1,0 +1,2 @@
+import { Button } from "@/components/ui/Button";
+export default function NotFound(){return <section className="page-hero"><div className="container hero-copy"><p className="eyebrow">404 · Không tìm thấy</p><h1>Trang này đã đi lạc khỏi làng</h1><p>Đường dẫn có thể đã thay đổi hoặc nội dung chưa được xuất bản.</p><div className="button-row"><Button href="/">Về trang chủ</Button><Button href="/san-pham" variant="secondary">Xem sản phẩm</Button></div></div></section>}
