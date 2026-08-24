@@ -1,8 +1,11 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 
 export function ProductListingHero() {
   return (
     <section className="product-listing-hero">
+      <Image className="route-hero-background product-listing-background" src="/images/brand/product-listing-hero-bg.webp" alt="" fill priority fetchPriority="high" sizes="100vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
       <div className="container product-listing-hero-inner">
         <div className="product-listing-hero-copy">
           <p className="product-listing-eyebrow">

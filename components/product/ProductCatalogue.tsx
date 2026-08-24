@@ -24,7 +24,7 @@ export function ProductCatalogue({ initialProducts, allProducts }: { initialProd
         </div>
       </div>
       <p className="result-count" aria-live="polite">Hiển thị {filtered.length} sản phẩm</p>
-      {filtered.length ? <div className="product-grid">{filtered.map((product) => <ProductCard product={product} key={product.slug} />)}</div> : <div className="empty-state"><h2>Chưa tìm thấy sản phẩm</h2><p>Thử một từ khóa hoặc danh mục khác.</p></div>}
+      {filtered.length ? <div className="product-grid">{filtered.map((product, index) => <ProductCard product={product} eager={index < 4} key={product.slug} />)}</div> : <div className="empty-state"><h2>Chưa tìm thấy sản phẩm</h2><p>Thử một từ khóa hoặc danh mục khác.</p></div>}
     </div>
   );
 }

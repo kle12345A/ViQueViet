@@ -8,6 +8,7 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { MarkdownContent } from "@/components/ui/MarkdownContent";
 import { getPost, getPosts } from "@/lib/content";
 import type { Post } from "@/lib/content/types";
+import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 import { JsonLd, pageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
@@ -56,7 +57,7 @@ export default async function ArticlePage({ params }: PageProps<"/tin-tuc/[slug]
             </div>
           </header>
 
-          <figure className="article-detail-cover"><Image src={post.cover} alt={post.title} fill priority sizes="(max-width: 900px) 100vw, 850px" /></figure>
+          <figure className="article-detail-cover"><Image src={post.cover} alt={post.title} fill priority fetchPriority="high" sizes="(max-width: 900px) 100vw, 850px" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} /></figure>
           <p className="article-detail-lead">{post.excerpt}</p>
           <MarkdownContent source={post.body} hideFirstHeading />
 

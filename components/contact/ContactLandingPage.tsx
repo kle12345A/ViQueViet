@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 import { ContactForm } from "./ContactForm";
 import { NewsletterForm } from "./NewsletterForm";
+import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 
 type IconName = "headset" | "shield" | "handshake" | "pin" | "phone" | "mail" | "globe" | "clock" | "factory" | "process" | "leaf" | "people";
 
@@ -34,6 +35,7 @@ export function ContactLandingPage() {
   return (
     <div className="contact-page">
       <section className="contact-hero">
+        <Image className="route-hero-background" src="/images/news/news-watercolor-bg.webp" alt="" fill priority fetchPriority="high" sizes="100vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
         <div className="container contact-hero-grid">
           <div className="contact-hero-copy">
             <p className="contact-eyebrow">Liên hệ</p>
@@ -44,7 +46,7 @@ export function ContactLandingPage() {
             </div>
           </div>
           <div className="contact-hero-media">
-            <Image className="contact-hero-image" src="/images/contact/contact-factory.webp" alt="Khu vực sản xuất thực tế của Vị Quê Việt" fill priority sizes="(max-width: 900px) 100vw, 52vw" />
+            <Image className="contact-hero-image" src="/images/contact/contact-factory.webp" alt="Khu vực sản xuất thực tế của Vị Quê Việt" fill priority sizes="(max-width: 900px) 100vw, 52vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
             <div className="contact-hero-badge" role="img" aria-label="Logo Vị Quê Việt"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="122px" /></div>
           </div>
         </div>
@@ -108,5 +110,5 @@ function Icon({ name }: { name: IconName }) {
     leaf: <><path d="M20 4C11 4 5 8 5 15c0 3 2 5 5 5 7 0 10-7 10-16Z"/><path d="M4 21c3-6 7-9 12-12"/></>,
     people: <><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 21v-2c0-4 2-6 6-6s6 2 6 6v2m0-7c3 0 6 2 6 6v1"/></>,
   };
-  return <span className="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24">{paths[name]}</svg></span>;
+  return <span className="contact-icon" data-icon={name} aria-hidden="true"><svg viewBox="0 0 24 24">{paths[name]}</svg></span>;
 }

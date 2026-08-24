@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 
 const values = [
   { title: "Sản phẩm chuẩn vị", description: "Phát triển món ăn phù hợp khẩu vị người Việt.", icon: "bowl" },
@@ -32,6 +33,7 @@ export function AboutLandingPage() {
   return (
     <main className="about-page">
       <section className="about-hero" aria-labelledby="about-title">
+        <Image className="route-hero-background" src="/images/brand/brand-story-showcase-bg.webp" alt="" fill priority fetchPriority="high" sizes="100vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
         <div className="container about-hero-grid">
           <div className="about-hero-copy">
             <p className="about-eyebrow"><LeafMark />Về chúng tôi</p>
@@ -48,10 +50,10 @@ export function AboutLandingPage() {
           <div className="about-collage" role="group" aria-label="Hình ảnh thực tế từ hoạt động sản xuất">
             <span className="about-collage-paper" aria-hidden="true" />
             <figure className="about-collage-photo about-collage-main">
-              <Image src="/images/about/about-production-team.webp" alt="Đội ngũ thao tác tại khu vực sản xuất" fill priority sizes="(max-width: 980px) 92vw, 48vw" />
+              <Image src="/images/about/about-production-team.webp" alt="Đội ngũ thao tác tại khu vực sản xuất" fill priority sizes="(max-width: 980px) 92vw, 48vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
             </figure>
             <figure className="about-collage-photo about-collage-small">
-              <Image src="/images/about/about-finished-products.webp" alt="Các phần sản phẩm đã được chuẩn bị và đóng khay" fill sizes="(max-width: 980px) 58vw, 25vw" />
+              <Image src="/images/about/about-finished-products.webp" alt="Các phần sản phẩm đã được chuẩn bị và đóng khay" fill sizes="(max-width: 980px) 58vw, 25vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
             </figure>
             <span className="about-paperclip" aria-hidden="true" />
             <span className="about-seal" aria-hidden="true"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="94px" /></span>
@@ -69,7 +71,7 @@ export function AboutLandingPage() {
           <div className="about-values-grid">
             {values.map((value) => (
               <article className="about-value-card" key={value.title}>
-                <span className="about-value-icon"><AboutIcon kind={value.icon} /></span>
+                <span className="about-value-icon" data-icon={value.icon}><AboutIcon kind={value.icon} /></span>
                 <div><h3>{value.title}</h3><p>{value.description}</p></div>
               </article>
             ))}

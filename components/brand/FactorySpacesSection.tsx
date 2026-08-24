@@ -44,7 +44,7 @@ export function FactorySpacesSection() {
             <div className="factory-spaces-features">
               {features.map((feature) => (
                 <div className="factory-spaces-feature" key={feature.title}>
-                  <span><SpaceIcon kind={feature.icon} /></span>
+                  <span data-icon={feature.icon}><SpaceIcon kind={feature.icon} /></span>
                   <strong>{feature.title}</strong>
                 </div>
               ))}
@@ -55,7 +55,7 @@ export function FactorySpacesSection() {
             {gallery.map((image, index) => (
               <figure className={`factory-space-image ${index === 0 ? "is-large" : ""}`} key={image.src}>
                 <div className="factory-space-image-media" style={{ position: "relative" }}><Image src={image.src} alt={image.alt} fill sizes={index === 0 ? "(max-width: 620px) 100vw, (max-width: 980px) 60vw, 36vw" : "(max-width: 620px) 50vw, (max-width: 980px) 40vw, 25vw"} /></div>
-                <figcaption><span><SpaceIcon kind={index === 0 ? "prep" : index === 1 ? "cook" : "package"} /></span>{image.label}</figcaption>
+                <figcaption><span data-icon={index === 0 ? "prep" : index === 1 ? "cook" : "package"}><SpaceIcon kind={index === 0 ? "prep" : index === 1 ? "cook" : "package"} /></span>{image.label}</figcaption>
               </figure>
             ))}
           </div>
@@ -64,7 +64,7 @@ export function FactorySpacesSection() {
         <div className="factory-zones">
           {zones.map((zone) => (
             <article className="factory-zone-card" key={zone.title}>
-              <span className="factory-zone-icon"><SpaceIcon kind={zone.icon} /></span>
+              <span className="factory-zone-icon" data-icon={zone.icon}><SpaceIcon kind={zone.icon} /></span>
               <h3>{zone.title}</h3>
               <p>{zone.description}</p>
             </article>

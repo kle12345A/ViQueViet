@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 import type { ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 
@@ -12,7 +13,7 @@ export function PageHero({ eyebrow, title, description, image, imageAlt, actions
           <p>{description}</p>
           {actions ?? <div className="button-row"><Button href="/san-pham">Khám phá sản phẩm</Button><Button href="/lien-he" variant="secondary">Liên hệ tư vấn</Button></div>}
         </div>
-        {image && <div className="hero-image"><Image src={image} alt={imageAlt ?? ""} fill loading="eager" fetchPriority="high" sizes="(max-width: 768px) 100vw, 48vw" /></div>}
+        {image && <div className="hero-image"><Image src={image} alt={imageAlt ?? ""} fill loading="eager" fetchPriority="high" sizes="(max-width: 768px) 100vw, 48vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} /></div>}
       </div>
     </section>
   );

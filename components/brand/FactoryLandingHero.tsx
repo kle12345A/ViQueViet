@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 
 const factoryFacts = [
   { title: "Tách khu", label: "Theo từng công đoạn", icon: "idea" },
@@ -17,6 +19,7 @@ function FactoryIcon({ kind }: { kind: (typeof factoryFacts)[number]["icon"] | "
 export function FactoryLandingHero() {
   return (
     <section className="factory-landing-hero">
+      <Image className="route-hero-background" src="/images/factory/factory-landing-hero-v2.webp" alt="" fill priority fetchPriority="high" sizes="100vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
       <div className="container factory-landing-inner">
         <div className="factory-landing-copy">
           <p className="factory-landing-eyebrow">Khu vực sản xuất</p>
@@ -38,7 +41,7 @@ export function FactoryLandingHero() {
         <div className="factory-facts">
           {factoryFacts.map((fact) => (
             <article className="factory-fact" key={fact.title}>
-              <span className="factory-fact-icon"><FactoryIcon kind={fact.icon} /></span>
+              <span className="factory-fact-icon" data-icon={fact.icon}><FactoryIcon kind={fact.icon} /></span>
               <div><h2>{fact.title}</h2><p>{fact.label}</p></div>
             </article>
           ))}

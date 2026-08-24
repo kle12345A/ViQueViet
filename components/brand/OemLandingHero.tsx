@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
+import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 
 const benefits = [
   { title: "Tư vấn công thức", description: "Định hướng sản phẩm phù hợp thị hiếu và định vị thương hiệu.", icon: "idea" },
@@ -20,6 +22,7 @@ export function OemLandingHero(_legacyProps?: Record<string, unknown>) {
   void _legacyProps;
   return (
     <section className="oem-landing-hero">
+      <Image className="route-hero-background" src="/images/oem/oem-landing-hero-v2.webp" alt="" fill priority fetchPriority="high" sizes="100vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
       <div className="container oem-landing-hero-inner">
         <div className="oem-landing-copy">
           <p className="oem-landing-eyebrow">OEM/ODM thực phẩm</p>
@@ -28,7 +31,7 @@ export function OemLandingHero(_legacyProps?: Record<string, unknown>) {
           <div className="oem-landing-benefits">
             {benefits.map((benefit) => (
               <article className="oem-landing-benefit" key={benefit.title}>
-                <span className="oem-landing-benefit-icon"><OemHeroIcon kind={benefit.icon} /></span>
+                <span className="oem-landing-benefit-icon" data-icon={benefit.icon}><OemHeroIcon kind={benefit.icon} /></span>
                 <h2>{benefit.title}</h2>
                 <p>{benefit.description}</p>
               </article>

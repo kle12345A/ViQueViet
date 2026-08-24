@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/global/Footer";
 import { Header } from "@/components/global/Header";
-import { MobileStickyActions } from "@/components/global/MobileStickyActions";
 import { JsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
@@ -27,7 +26,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main>{children}</main>
         <Footer />
-        <MobileStickyActions />
       </body>
     </html>
   );
