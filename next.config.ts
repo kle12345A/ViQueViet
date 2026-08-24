@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [360, 414, 480, 640, 750, 828, 1080, 1200, 1440, 1920],
+    qualities: [70, 75],
     minimumCacheTTL: 2678400,
   },
   async headers() {

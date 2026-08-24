@@ -818,16 +818,29 @@ h1{font-size:clamp(1.95rem,2.8vw,2.7rem)!important;font-weight:700!important;lin
 }
 
 @keyframes vqv-view-reveal{
-  from{translate:0 14px}
+  from{translate:0 24px;scale:.985}
+  to{translate:0 0;scale:1}
+}
+
+@keyframes vqv-view-media{
+  from{translate:18px 0;scale:.975}
+  to{translate:0 0;scale:1}
+}
+
+@keyframes vqv-view-text-slide{
+  from{translate:-46px 0}
   to{translate:0 0}
 }
 
 @supports (animation-timeline:view()){
-  :where(.section-heading,.about-section-heading,.factory-detail-heading,.news-results-heading,.contact-visit-copy,.brand-story-copy,.oem-showcase-copy,.video-about-copy,.partner-showcase-heading){animation:vqv-view-reveal linear both;animation-timeline:view();animation-range:entry 4% cover 25%}
-  :where(.product-grid,.article-grid,.news-grid,.factory-zones,.factory-process-list,.about-values-grid,.about-approach-grid,.partner-logo-grid,.contact-values-grid) > *{animation:vqv-view-reveal linear both;animation-timeline:view();animation-range:entry 2% cover 22%}
-  :where(.factory-focus-row,.about-capability-grid,.contact-main-grid,.contact-visit-grid,.product-detail-panel){animation:vqv-view-reveal linear both;animation-timeline:view();animation-range:entry 3% cover 24%}
+  :where(.section-heading>h2,.about-section-heading>h2,.factory-detail-heading>h2,.news-results-heading h2,.contact-visit-copy>h2,.brand-story-copy>h2,.oem-showcase-copy>h2,.video-about-copy>h2,.partner-showcase-heading h2,.factory-spaces-copy>h2,.about-capability-copy>h2){animation:vqv-view-text-slide linear both;animation-timeline:view();animation-range:entry 1% cover 24%;animation-timing-function:cubic-bezier(.16,.75,.25,1)}
+  :where(.product-grid,.article-grid,.news-grid,.factory-zones,.factory-process-list,.about-values-grid,.about-approach-grid,.partner-logo-grid,.contact-values-grid) > *{animation:vqv-view-reveal linear both;animation-timeline:view();animation-range:entry 1% cover 25%;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+  :where(.product-grid,.article-grid,.news-grid,.factory-zones,.factory-process-list,.about-values-grid,.about-approach-grid,.partner-logo-grid,.contact-values-grid) > :nth-child(3n + 2){animation-range:entry 4% cover 28%}
+  :where(.product-grid,.article-grid,.news-grid,.factory-zones,.factory-process-list,.about-values-grid,.about-approach-grid,.partner-logo-grid,.contact-values-grid) > :nth-child(3n){animation-range:entry 7% cover 31%}
+  :where(.factory-focus-row,.about-capability-grid,.contact-main-grid,.contact-visit-grid,.product-detail-panel){animation:vqv-view-reveal linear both;animation-timeline:view();animation-range:entry 2% cover 27%;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+  :where(.split-image,.brand-story-collage,.oem-collage,.video-about-player,.factory-spaces-gallery,.about-capability-image,.news-featured-image,.contact-hero-media,.contact-map){animation:vqv-view-media linear both;animation-timeline:view();animation-range:entry 2% cover 28%;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
 }
 
 @media(prefers-reduced-motion:reduce){
-  :where(.section-heading,.about-section-heading,.factory-detail-heading,.news-results-heading,.contact-visit-copy,.brand-story-copy,.oem-showcase-copy,.video-about-copy,.partner-showcase-heading,.product-grid>*,.article-grid>*,.news-grid>*,.factory-zones>*,.factory-process-list>*,.about-values-grid>*,.about-approach-grid>*,.partner-logo-grid>*,.contact-values-grid>*,.factory-focus-row,.about-capability-grid,.contact-main-grid,.contact-visit-grid,.product-detail-panel){animation:none!important;translate:none!important}
+  :where(.section-heading>h2,.about-section-heading>h2,.factory-detail-heading>h2,.news-results-heading h2,.contact-visit-copy>h2,.brand-story-copy>h2,.oem-showcase-copy>h2,.video-about-copy>h2,.partner-showcase-heading h2,.factory-spaces-copy>h2,.about-capability-copy>h2,.product-grid>*,.article-grid>*,.news-grid>*,.factory-zones>*,.factory-process-list>*,.about-values-grid>*,.about-approach-grid>*,.partner-logo-grid>*,.contact-values-grid>*,.factory-focus-row,.about-capability-grid,.contact-main-grid,.contact-visit-grid,.product-detail-panel,.split-image,.brand-story-collage,.oem-collage,.video-about-player,.factory-spaces-gallery,.about-capability-image,.news-featured-image,.contact-hero-media,.contact-map){animation:none!important;translate:none!important;scale:none!important}
 }

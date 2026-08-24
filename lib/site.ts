@@ -7,7 +7,7 @@ export const siteConfig = {
   legalName: process.env.NEXT_PUBLIC_LEGAL_NAME ?? "Vị Quê Việt",
   description:
     "Những món ăn quen vị Việt, được làm chỉn chu để mỗi bữa cơm thêm tiện và ngon.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://viqueviet.vn",
   phone: contactPhone,
   secondaryPhone,
   phoneHref: contactPhone ? `tel:${contactPhone.replace(/[^\d+]/g, "")}` : "/lien-he",
@@ -15,7 +15,7 @@ export const siteConfig = {
   zaloHref: zaloUrl || "/lien-he",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "Viqueviet2026@gmail.com",
   address: process.env.NEXT_PUBLIC_CONTACT_ADDRESS ?? "Tổ dân phố Vũ Dương 2, Phường Bồng Lai, tỉnh Bắc Ninh",
-  publicWebsite: process.env.NEXT_PUBLIC_PUBLIC_WEBSITE ?? "https://linhdangfoods.vn",
+  publicWebsite: process.env.NEXT_PUBLIC_PUBLIC_WEBSITE ?? "https://viqueviet.vn",
   workingHours: process.env.NEXT_PUBLIC_WORKING_HOURS ?? "Thứ 2 – Thứ 7 · 08:00 – 17:30",
 };
 
