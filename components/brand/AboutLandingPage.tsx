@@ -8,6 +8,12 @@ const values = [
   { title: "Đồng hành đối tác", description: "Phát triển và sản xuất OEM/ODM theo nhu cầu thực tế.", icon: "handshake" },
 ] as const;
 
+const heroHighlights = [
+  { title: "Hương vị Việt", description: "Gìn giữ tinh hoa ẩm thực truyền thống.", icon: "bowl" },
+  { title: "Quy trình hiện đại", description: "Sản xuất khép kín, kiểm soát chặt chẽ từng công đoạn.", icon: "factory" },
+  { title: "Đồng hành OEM/ODM", description: "Linh hoạt – Uy tín – Bền vững cùng đối tác phát triển.", icon: "handshake" },
+] as const;
+
 const approach = [
   { number: "01", title: "Bắt đầu từ nhu cầu", description: "Lắng nghe mục tiêu sản phẩm, nhóm khách hàng và cách sản phẩm sẽ được đưa ra thị trường." },
   { number: "02", title: "Làm rõ phương án", description: "Trao đổi về sản phẩm, quy cách và cách tổ chức sản xuất phù hợp với nhu cầu thực tế." },
@@ -37,14 +43,23 @@ export function AboutLandingPage() {
         <div className="container about-hero-grid">
           <div className="about-hero-copy">
             <p className="about-eyebrow"><LeafMark />Về chúng tôi</p>
-            <h1 id="about-title">Vị Quê Việt – gìn giữ hương vị quê nhà bằng một quy trình hiện đại</h1>
+            <h1 id="about-title">Vị Quê Việt – gìn giữ<br />hương vị quê nhà bằng<br />một quy trình hiện đại</h1>
             <span className="about-rule" aria-hidden="true" />
             <p>Vị Quê Việt là doanh nghiệp thực phẩm Việt Nam tập trung phát triển các sản phẩm tiện lợi mang hương vị quen thuộc của bữa cơm Việt. Chúng tôi lựa chọn nguyên liệu phù hợp, chuẩn hóa quy trình và không ngừng hoàn thiện sản phẩm để đáp ứng nhu cầu của gia đình hiện đại.</p>
             <p>Bên cạnh thương hiệu riêng, Vị Quê Việt phát triển năng lực sản xuất và hợp tác OEM/ODM nhằm đồng hành cùng doanh nghiệp, nhà phân phối và các đối tác trong quá trình đưa sản phẩm thực phẩm ra thị trường.</p>
+            <div className="about-hero-highlights">
+              {heroHighlights.map((item) => (
+                <div className="about-hero-highlight" key={item.title}>
+                  <span className="about-hero-highlight-icon"><AboutIcon kind={item.icon} /></span>
+                  <div><strong>{item.title}</strong><span>{item.description}</span></div>
+                </div>
+              ))}
+            </div>
             <div className="about-actions">
               <Button href="/oem-odm">Khám phá năng lực <span aria-hidden="true">→</span></Button>
               <Button href="/nha-may" variant="secondary">Xem nhà máy <span aria-hidden="true">→</span></Button>
             </div>
+            <p className="about-helper"><LeafMark />Tư vấn sản phẩm – OEM/ODM – Nhà máy</p>
           </div>
 
           <div className="about-collage" role="group" aria-label="Hình ảnh thực tế từ hoạt động sản xuất">
@@ -56,6 +71,10 @@ export function AboutLandingPage() {
               <Image src="/images/about/about-finished-products.webp" alt="Các phần sản phẩm đã được chuẩn bị và đóng khay" fill sizes="(max-width: 980px) 58vw, 25vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
             </figure>
             <span className="about-paperclip" aria-hidden="true" />
+            <aside className="about-story-note" aria-label="Thông điệp thương hiệu">
+              <span>Chuẩn vị quê nhà<br />— An tâm cho<br />bữa ăn mỗi ngày</span>
+              <b aria-hidden="true">♡</b>
+            </aside>
             <span className="about-seal" aria-hidden="true"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="94px" /></span>
           </div>
         </div>

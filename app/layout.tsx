@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
+import { Be_Vietnam_Pro, Lora } from "next/font/google";
 import { Footer } from "@/components/global/Footer";
 import { Header } from "@/components/global/Header";
 import { JsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
+
+const contactSerif = Lora({
+  subsets: ["latin", "vietnamese"],
+  variable: "--font-contact-serif",
+  display: "swap",
+});
+
+const contactSans = Be_Vietnam_Pro({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "600", "700"],
+  variable: "--font-contact-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -21,7 +35,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="vi" data-scroll-behavior="smooth">
-      <body>
+      <body className={`${contactSerif.variable} ${contactSans.variable}`}>
         <JsonLd data={{ "@context": "https://schema.org", "@type": "Organization", name: siteConfig.legalName, url: siteConfig.url, logo: new URL("/images/brand/vi-que-viet-logo.png", siteConfig.url).toString(), telephone: siteConfig.phone || undefined }} />
         <Header />
         <main>{children}</main>

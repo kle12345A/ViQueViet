@@ -39,15 +39,21 @@ export function ContactLandingPage() {
         <div className="container contact-hero-grid">
           <div className="contact-hero-copy">
             <p className="contact-eyebrow">Liên hệ</p>
-            <h1>Chúng tôi luôn sẵn sàng lắng nghe và đồng hành cùng bạn</h1>
-            <p className="contact-hero-description">Bạn có câu hỏi về sản phẩm, cần tư vấn OEM/ODM hoặc muốn hợp tác phân phối? Hãy liên hệ với Vị Quê Việt – chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
+            <h1>Chúng tôi luôn sẵn sàng<br />nghe và đồng hành cùng bạn</h1>
+            <p className="contact-hero-description">Bạn có câu hỏi về sản phẩm, cần tư vấn OEM/ODM hoặc muốn hợp tác phân phối? Hãy liên hệ với Linh Đăng Foods — chúng tôi sẽ phản hồi trong thời gian sớm nhất.</p>
             <div className="contact-hero-features">
               {heroFeatures.map((item) => <div className="contact-hero-feature" key={item.title}><Icon name={item.icon} /><div><strong>{item.title}</strong><span>{item.text}</span></div></div>)}
             </div>
           </div>
           <div className="contact-hero-media">
-            <Image className="contact-hero-image" src="/images/contact/contact-factory.webp" alt="Khu vực sản xuất thực tế của Vị Quê Việt" fill priority sizes="(max-width: 900px) 100vw, 52vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
-            <div className="contact-hero-badge" role="img" aria-label="Logo Vị Quê Việt"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="122px" /></div>
+            <span className="contact-hero-pigment" aria-hidden="true" />
+            <div className="contact-hero-photo">
+              <Image className="contact-hero-image" src="/images/contact/contact-factory.webp" alt="Khu vực sản xuất thực tế của Linh Đăng Foods" fill priority unoptimized sizes="(max-width: 900px) 100vw, 52vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
+            </div>
+            <span className="contact-hero-bamboo contact-hero-bamboo-top" aria-hidden="true" />
+            <span className="contact-hero-bamboo contact-hero-bamboo-bottom" aria-hidden="true" />
+            <aside className="contact-hero-note" aria-label="Cam kết đồng hành">Tư vấn tận tâm<br />— Đồng hành lâu dài</aside>
+            <div className="contact-hero-badge" role="img" aria-label="Dấu thương hiệu Vị Quê Việt"><Image src="/images/brand/vi-que-viet-logo.png" alt="" fill sizes="112px" /></div>
           </div>
         </div>
       </section>

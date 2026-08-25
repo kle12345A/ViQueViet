@@ -5,7 +5,7 @@ import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 export function ProductListingHero() {
   return (
     <section className="product-listing-hero">
-      <Image className="route-hero-background product-listing-background" src="/images/brand/product-listing-hero-bg.webp" alt="" fill priority fetchPriority="high" sizes="100vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
+      <Image className="route-hero-background product-listing-background" src="/art/product-hero-background.webp" alt="" fill priority fetchPriority="high" sizes="100vw" placeholder="blur" blurDataURL={IMAGE_BLUR_DATA_URL} />
       <div className="container product-listing-hero-inner">
         <div className="product-listing-hero-copy">
           <p className="product-listing-eyebrow">
@@ -20,6 +20,19 @@ export function ProductListingHero() {
             <Button href="/lien-he" variant="secondary">Liên hệ tư vấn</Button>
           </div>
         </div>
+        <figure className="product-listing-hero-visual">
+          <span className="product-listing-watercolor" aria-hidden="true" />
+          <Image
+            src="/images/brand/product-listing-hero-bg.webp"
+            alt="Mẹt giò chả, nem rán và rau củ dùng trong bữa cơm Việt"
+            fill
+            priority
+            fetchPriority="high"
+            sizes="(max-width: 760px) 100vw, 62vw"
+            placeholder="blur"
+            blurDataURL={IMAGE_BLUR_DATA_URL}
+          />
+        </figure>
       </div>
     </section>
   );
