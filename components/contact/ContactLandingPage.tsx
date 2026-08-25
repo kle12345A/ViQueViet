@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 import { ContactForm } from "./ContactForm";
+import { ContactFAQ } from "./ContactFAQ";
 import { NewsletterForm } from "./NewsletterForm";
 import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 
@@ -93,6 +94,8 @@ export function ContactLandingPage() {
           {values.map((item) => <article className="contact-value" key={item.title}><Icon name={item.icon} /><div><h2>{item.title}</h2><p>{item.text}</p></div></article>)}
         </div>
       </section>
+
+      <ContactFAQ />
 
       <section className="contact-newsletter">
         <div className="container contact-newsletter-inner"><div><p className="contact-eyebrow">Đăng ký nhận thông tin</p><h2>Cập nhật tin tức từ Vị Quê Việt</h2><span>Nhận tin tức, sản phẩm mới và thông tin ưu đãi.</span></div><NewsletterForm /></div>

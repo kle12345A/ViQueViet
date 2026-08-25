@@ -17,7 +17,7 @@ export default function FactoryPage() {
       <FactoryLandingHero />
       <FactorySpacesSection />
       <FactoryJourneySections />
-      <CTASection title="Bạn muốn tìm hiểu thêm về cách sản phẩm được làm?" />
+      <CTASection title="Bạn cần đánh giá nhà máy trước khi bắt đầu dự án?" description="Gửi nhóm sản phẩm và yêu cầu dự kiến để đội ngũ Vị Quê Việt chuẩn bị nội dung trao đổi, hình ảnh khu vực phù hợp hoặc lịch tham quan nhà máy." />
     </>
   );
 }

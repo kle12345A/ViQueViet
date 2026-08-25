@@ -31,7 +31,7 @@ export function HomeProductHero() {
           <span className="home-product-rule" aria-hidden="true" />
           <p className="home-product-description">Từ giò chả, xúc xích đến chả cốm, nem chua rán — những món quen được chuẩn bị gọn gàng để bạn dễ chọn cho bữa ăn mỗi ngày.</p>
           <p className="home-product-note">Giữ vị quen thuộc, tối ưu cho nhịp sống hiện đại.</p>
-          <div className="home-product-actions"><Button href="/san-pham">Khám phá sản phẩm <span>→</span></Button><Button href="/lien-he" variant="secondary">Liên hệ tư vấn <span>→</span></Button></div>
+          <div className="home-product-actions"><Button href="/san-pham">Khám phá sản phẩm <span>→</span></Button><Button href="/lien-he#gui-yeu-cau" variant="secondary">Trao đổi OEM/ODM <span>→</span></Button></div>
         </div>
 
         <div className="home-product-visual">

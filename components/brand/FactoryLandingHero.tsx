@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/Button";
 import { IMAGE_BLUR_DATA_URL } from "@/lib/image";
 
 const factoryFacts = [
-  { title: "Tách khu", label: "Theo từng công đoạn", icon: "idea" },
-  { title: "Bảo hộ", label: "Khi làm việc tại xưởng", icon: "shield" },
-  { title: "Thiết bị", label: "Cho chế biến và đóng gói", icon: "truck" },
-  { title: "Ảnh thật", label: "Từ khu vực sản xuất", icon: "checklist" },
+  { title: "Tách khu", label: "Sơ chế, chế biến, đóng gói", icon: "idea" },
+  { title: "Bảo hộ", label: "Trang phục tại khu thao tác", icon: "shield" },
+  { title: "Thiết bị", label: "Bồn, bàn và khay inox", icon: "truck" },
+  { title: "Ảnh thực tế", label: "Ghi nhận trực tiếp tại xưởng", icon: "checklist" },
 ] as const;
 
 function FactoryIcon({ kind }: { kind: (typeof factoryFacts)[number]["icon"] | "safe" }) {
@@ -25,10 +25,10 @@ export function FactoryLandingHero() {
           <p className="factory-landing-eyebrow">Khu vực sản xuất</p>
           <span className="factory-landing-rule" aria-hidden="true" />
           <h1>Nơi mỗi món ăn<br />được làm thành hình</h1>
-          <p className="factory-landing-description">Không gian sạch sẽ, thao tác rõ ràng và một đội ngũ làm việc cẩn thận — đây là những hình ảnh thật từ khu vực sản xuất.</p>
+          <p className="factory-landing-description">Theo dõi trực tiếp các khu sơ chế, chế biến, đóng gói và thiết bị inox đang được sử dụng. Hình ảnh trên trang được ghi nhận từ hoạt động thực tế tại xưởng.</p>
           <div className="factory-landing-actions">
             <Button href="/san-pham">Khám phá sản phẩm</Button>
-            <Button href="/lien-he" variant="secondary">Liên hệ tư vấn</Button>
+            <Button href="/lien-he#gui-yeu-cau" variant="secondary">Trao đổi nhu cầu OEM/ODM</Button>
           </div>
         </div>
 

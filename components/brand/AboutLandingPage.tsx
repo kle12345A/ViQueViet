@@ -144,7 +144,7 @@ export function AboutLandingPage() {
           </div>
           <div className="about-actions">
             <Button href="/san-pham">Xem sản phẩm</Button>
-            <Button href="/lien-he" variant="secondary">Liên hệ</Button>
+            <Button href="/lien-he#gui-yeu-cau" variant="secondary">Trao đổi OEM/ODM</Button>
           </div>
         </div>
       </section>

@@ -8,16 +8,16 @@ const gallery = [
 ] as const;
 
 const features = [
-  { title: "Phân tách theo công đoạn", icon: "flow" },
-  { title: "Dễ kiểm soát vệ sinh", icon: "shield" },
-  { title: "Tối ưu thao tác", icon: "process" },
+  { title: "Dòng công việc theo thứ tự", icon: "flow" },
+  { title: "Bề mặt, thiết bị dễ vệ sinh", icon: "shield" },
+  { title: "Thuận tiện theo dõi từng bước", icon: "process" },
 ] as const;
 
 const zones = [
-  { title: "Khu sơ chế", description: "Chuẩn bị nguyên liệu gọn gàng", icon: "prep" },
-  { title: "Khu chế biến", description: "Vận hành theo quy trình rõ ràng", icon: "cook" },
-  { title: "Khu đóng gói", description: "Đảm bảo đồng đều và sạch sẽ", icon: "package" },
-  { title: "Khu bảo quản", description: "Sắp xếp thành phẩm khoa học", icon: "storage" },
+  { title: "Khu sơ chế", description: "Tiếp nhận, phân loại và chuẩn bị nguyên liệu trước khi chế biến.", icon: "prep" },
+  { title: "Khu chế biến", description: "Thiết bị inox phục vụ thao tác theo từng dòng sản phẩm.", icon: "cook" },
+  { title: "Khu đóng gói", description: "Định lượng, hoàn thiện và xếp sản phẩm theo quy cách.", icon: "package" },
+  { title: "Khu bảo quản", description: "Phân nhóm, sắp xếp thành phẩm trước khi xuất kho.", icon: "storage" },
 ] as const;
 
 type IconKind = (typeof features)[number]["icon"] | (typeof zones)[number]["icon"];
@@ -40,7 +40,7 @@ export function FactorySpacesSection() {
           <div className="factory-spaces-intro">
             <p className="factory-spaces-eyebrow">Không gian</p>
             <h2>Mỗi việc có<br />một khu vực riêng</h2>
-            <p className="factory-spaces-description">Từ khâu sơ chế, chế biến đến đóng gói và bảo quản, mỗi khu vực được bố trí theo dòng chảy công việc để vận hành gọn gàng, vệ sinh và dễ kiểm soát.</p>
+            <p className="factory-spaces-description">Nguyên liệu đi từ khu chuẩn bị sang khu chế biến, sau đó được hoàn thiện tại khu đóng gói và chuyển sang bảo quản. Cách phân khu giúp thao tác không chồng chéo và thuận tiện theo dõi từng bước.</p>
             <div className="factory-spaces-features">
               {features.map((feature) => (
                 <div className="factory-spaces-feature" key={feature.title}>
@@ -71,7 +71,7 @@ export function FactorySpacesSection() {
           ))}
         </div>
 
-        <div className="factory-spaces-cta"><Link href="#con-nguoi-nha-may">Xem thêm hình ảnh nhà máy <span aria-hidden="true">→</span></Link></div>
+        <div className="factory-spaces-cta"><Link href="#con-nguoi-nha-may">Xem quy trình và con người tại xưởng <span aria-hidden="true">→</span></Link></div>
       </div>
     </section>
   );

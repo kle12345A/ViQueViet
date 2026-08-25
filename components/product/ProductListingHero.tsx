@@ -17,7 +17,7 @@ export function ProductListingHero() {
           <p className="product-listing-description">Từ giò chả đến món ăn vặt, bạn có thể tìm theo tên hoặc chọn nhanh từng nhóm món.</p>
           <div className="product-listing-actions">
             <Button href="#danh-sach-san-pham">Khám phá sản phẩm <span aria-hidden="true">→</span></Button>
-            <Button href="/lien-he" variant="secondary">Liên hệ tư vấn</Button>
+            <Button href="/lien-he#gui-yeu-cau" variant="secondary">Tư vấn OEM/ODM</Button>
           </div>
         </div>
         <figure className="product-listing-hero-visual">
